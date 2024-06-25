@@ -1,0 +1,10 @@
+# gitignore of dotfiles
+
+# ignore everything
+~/*
+
+# except
+!.zshrc
+!.config/alacritty/
+!.tmux.conf
+!.config/nvim/
