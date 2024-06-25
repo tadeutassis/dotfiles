@@ -1,13 +1,2 @@
 # gitignore of dotfiles
-
-# ignore everything
-*
-
-# except
-!.zshrc
-!.tmux.conf
-!.config
-!.config/nvim
-!.config/nvim/**
-!.config/alacritty
-!.config/alacritty/**
+**/*.json
