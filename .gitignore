@@ -1,7 +1,7 @@
 # gitignore of dotfiles
 
 # ignore everything
-~/*
+*
 
 # except
 !.zshrc
