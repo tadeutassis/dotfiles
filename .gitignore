@@ -5,6 +5,9 @@
 
 # except
 !.zshrc
-!.config/alacritty/
 !.tmux.conf
-!.config/nvim/
+!.config
+!.config/nvim
+!.config/nvim/**
+!.config/alacritty
+!.config/alacritty/**
