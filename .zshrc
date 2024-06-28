@@ -14,14 +14,27 @@ autoload -U compinit && compinit      # load completions
 zinit light zsh-users/zsh-autosuggestions
 # fzf integration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+zinit light Aloxaf/fzf-tab
 # completion opts
 bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
 zstyle ":completion:*" matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ":completion:*" list-colors '${(s.:.)LS_COLORS}'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:*' switch-group '<' '>'
+
+# fzf theme
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:-1,fg+:#2C363C,bg:-1,bg+:#F0EDEC
+  --color=hl:#2B747C,hl+:#3B8992,info:#3F5A22,marker:#7B3B70
+  --color=prompt:#88507D,spinner:#94253E,pointer:#A8334C,header:#286486
+  --color=border:#4F5E68,label:#1D5573,query:#4F5E68
+  --preview-window="border-sharp" --prompt="> " --marker="*" --pointer=">"
+  --separator="─" --scrollbar="│" --layout="reverse" --info="right"'
 
 # aliases
-alias ls="ls --color"
+alias ls="eza"
 
 # command history management
 HISTSIZE=5000
@@ -58,3 +71,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # using zoxide to navigate directories
 eval "$(zoxide init --cmd cd zsh)"
+
+# set default text editor
+export EDITOR=nvim
