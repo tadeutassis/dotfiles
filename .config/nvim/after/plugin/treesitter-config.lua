@@ -6,7 +6,6 @@ configs.setup({
     "lua",
     "vim",
     "vimdoc",
-    "latex",
     "query",
     "python",
     "html",
@@ -14,7 +13,7 @@ configs.setup({
   },
   highlight = {
     enable = true,
-    -- disable = { "latex" },
+    disable = { "latex" },
     -- additional_vim_regex_highlighting = { "latex", "markdown" },
   },
   indent = { enable = true },

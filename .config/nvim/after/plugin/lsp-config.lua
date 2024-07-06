@@ -4,7 +4,7 @@ require("mason-lspconfig").setup({
     "lua_ls",
     "clangd",
     "html",
-    "pyright",
+    "pylsp",
   },
 })
 
@@ -33,23 +33,32 @@ lspconfig.html.setup({
   capabilities = capabilities,
 })
 
-lspconfig.pyright.setup({
+lspconfig.pylsp.setup({
   capabilities = capabilities,
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          enabled = false,
+        },
+      },
+    },
+  },
 })
 
-lspconfig.texlab.setup({
-	capabilities = capabilities,
-	settings = {
-		texlab = {
-			build = {
-				forwardSearchAfter = true,
-			},
-			forwardSearch = {
-				executable = "zathura",
-				args = { "--synctex-forward", "%l:1:%f", "%p" },
-				onSave = true,
-			},
-		},
-	},
-})
-vim.keymap.set("n", "\\ll", "<cmd>TexlabBuild<CR>")
+-- lspconfig.texlab.setup({
+--   -- capabilities = capabilities,
+--   settings = {
+--     texlab = {
+--       build = {
+--         forwardSearchAfter = true,
+--       },
+--       forwardSearch = {
+--         executable = "zathura",
+--         args = { "--synctex-forward", "%l:1:%f", "%p" },
+--         onSave = true,
+--       },
+--     },
+--   },
+-- })
+-- vim.keymap.set("n", "\\ll", "<cmd>TexlabBuild<CR>")

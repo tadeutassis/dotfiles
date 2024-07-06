@@ -1,5 +1,8 @@
 vim.keymap.set("n", "<leader>ch", "<cmd>nohl<CR>") -- clean search highlights
 
+vim.keymap.set("n", "<A-j>", "ddp") -- swap with line below
+vim.keymap.set("n", "<A-k>", "ddkP") -- swap with line above
+
 -- windows
 
 vim.keymap.set("n", "<A-J>", "<cmd>resize +1<CR>") -- resize split height

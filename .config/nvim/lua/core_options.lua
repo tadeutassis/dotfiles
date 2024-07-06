@@ -4,8 +4,15 @@ vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
+vim.opt.guicursor = ""
 vim.opt.signcolumn = "yes"
 vim.opt.showmode = false
+vim.opt.spell = true
+vim.opt.scrolloff = 10
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undofile = true
 
 -- new splits to right and below
 vim.opt.splitbelow = true
