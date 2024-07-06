@@ -1,20 +1,22 @@
 set window-height 3000
 set window-width 3000
 
-set default-bg '#f0edec'
+include catppuccin-frappe
 
-set highlight-color '#88507d'
-set highlight-active-color '#3b8992'
-
-set statusbar-bg '#cfc1ba'
-set statusbar-fg '#2c363c'
-
-set inputbar-bg '#4f6c31'
-set inputbar-fg '#f0edec'
-set notification-bg '#2b747c'
-set notification-fg '#f0edec'
-set notification-error-bg '#803d1c'
-set notification-error-fg '#f0edec'
-set notification-warning-bg '#94253e'
-set notification-warning-fg '#f0edec'
+# set default-bg '#f0edec'
+#
+# set highlight-color '#88507d'
+# set highlight-active-color '#3b8992'
+#
+# set statusbar-bg '#cfc1ba'
+# set statusbar-fg '#2c363c'
+#
+# set inputbar-bg '#4f6c31'
+# set inputbar-fg '#f0edec'
+# set notification-bg '#2b747c'
+# set notification-fg '#f0edec'
+# set notification-error-bg '#803d1c'
+# set notification-error-fg '#f0edec'
+# set notification-warning-bg '#94253e'
+# set notification-warning-fg '#f0edec'
 
