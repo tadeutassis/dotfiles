@@ -1,3 +1,4 @@
+# zmodload zsh/zprof
 # setup zinit plugin manager
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -5,7 +6,7 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # simple prompt
-PROMPT=" %B[%F{blue}%~%f]%b%F{magenta} ❯%f "
+PROMPT=" %B%F{white}[%f%F{green}%~%f%F{white}]%f%b %F{magenta}❯%f "
 
 # highlighting, completions and suggestions
 zinit light zsh-users/zsh-syntax-highlighting
@@ -25,16 +26,23 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:*' switch-group '<' '>'
 
 # fzf theme
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-  --color=fg:-1,fg+:#2C363C,bg:-1,bg+:#F0EDEC
-  --color=hl:#2B747C,hl+:#3B8992,info:#3F5A22,marker:#7B3B70
-  --color=prompt:#88507D,spinner:#94253E,pointer:#A8334C,header:#286486
-  --color=border:#4F5E68,label:#1D5573,query:#4F5E68
-  --preview-window="border-sharp" --prompt="> " --marker="*" --pointer=">"
-  --separator="─" --scrollbar="│" --layout="reverse" --info="right"'
-
+# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+#   --color=fg:-1,fg+:#2C363C,bg:-1,bg+:#F0EDEC
+#   --color=hl:#2B747C,hl+:#3B8992,info:#3F5A22,marker:#7B3B70
+#   --color=prompt:#88507D,spinner:#94253E,pointer:#A8334C,header:#286486
+#   --color=border:#4F5E68,label:#1D5573,query:#4F5E68
+#   --preview-window="border-sharp" --prompt="> " --marker="*" --pointer=">"
+#   --separator="─" --scrollbar="│" --layout="reverse" --info="right"'
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 # aliases
-alias ls="eza"
+alias vi='nvim'
+alias vim='nvim'
+alias ls='eza'
+alias fzvi='nvim $(fzf -m --preview="bat --color=always {}")'
+alias fzat='zathura $(fzf -m --preview="bat --color=always {}")'
 
 # command history management
 HISTSIZE=5000
@@ -74,3 +82,13 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # set default text editor
 export EDITOR=nvim
+
+# nvm lazy loading
+# note: it was fucking up with nvim lsp because node was not being loaded
+# zinit light undg/zsh-nvm-lazy-load
+
+# normal nvm loader
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# zprof
