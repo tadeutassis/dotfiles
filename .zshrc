@@ -6,7 +6,7 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # simple prompt
-PROMPT=" %B%F{white}[%f%F{green}%~%f%F{white}]%f%b %F{magenta}❯%f "
+PROMPT="%B%F{white}[%f%F{green}%~%f%F{white}]%f%b%F{magenta}❯%f "
 
 # highlighting, completions and suggestions
 zinit light zsh-users/zsh-syntax-highlighting
@@ -33,10 +33,18 @@ zstyle ':fzf-tab:*' switch-group '<' '>'
 #   --color=border:#4F5E68,label:#1D5573,query:#4F5E68
 #   --preview-window="border-sharp" --prompt="> " --marker="*" --pointer=">"
 #   --separator="─" --scrollbar="│" --layout="reverse" --info="right"'
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+--color=fg:#d3c6aa,bg:#2d353b,hl:#7fbbb3
+--color=fg+:#d3c6aa,bg+:#2d353b,hl+:#83c092
+--color=info:#dbbc7f,prompt:#e67e80,pointer:#d699b6
+--color=marker:#d699b6,spinner:#e67e80,header:#dbbc7f
+--preview-window="border-sharp" --prompt="> " --marker="*" --pointer=">"
+--separator="─" --scrollbar="│" --layout="reverse" --info="right"'
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+# --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+# --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
 # aliases
 alias vi='nvim'
 alias vim='nvim'
@@ -87,8 +95,15 @@ export EDITOR=nvim
 # note: it was fucking up with nvim lsp because node was not being loaded
 # zinit light undg/zsh-nvm-lazy-load
 
-# normal nvm loader
+# nvm loader
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
+export PATH="$PATH:/usr/local/go/bin"
+
 # zprof
