@@ -1,7 +1,10 @@
 set window-height 3000
 set window-width 3000
-
-include catppuccin-frappe
+set guioptions 'hv'
+set statusbar-basename false
+set font 'CommitMono Nerd Font  normal 13'
+# include catppuccin-frappe
+include everforest-dark
 
 # set default-bg '#f0edec'
 #
