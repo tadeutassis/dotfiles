@@ -5,6 +5,7 @@ require("mason-lspconfig").setup({
     "clangd",
     "html",
     "pylsp",
+    "marksman",
   },
 })
 
@@ -13,8 +14,6 @@ null_ls.setup({
   sources = {
     null_ls.builtins.formatting.stylua,
     null_ls.builtins.formatting.prettier,
-    null_ls.builtins.formatting.black,
-    -- null_ls.builtins.disgnostics.
   },
 })
 
@@ -46,19 +45,25 @@ lspconfig.pylsp.setup({
   },
 })
 
+lspconfig.marksman.setup({
+  capabilities = capabilities,
+})
+
 -- lspconfig.texlab.setup({
---   -- capabilities = capabilities,
+--   capabilities = capabilities,
 --   settings = {
 --     texlab = {
 --       build = {
 --         forwardSearchAfter = true,
+--         onSave = true,
 --       },
 --       forwardSearch = {
 --         executable = "zathura",
 --         args = { "--synctex-forward", "%l:1:%f", "%p" },
---         onSave = true,
+--         -- onSave = true,
 --       },
 --     },
 --   },
 -- })
 -- vim.keymap.set("n", "\\ll", "<cmd>TexlabBuild<CR>")
+-- vim.keymap.set("n", "\\lv", "<cmd>TexlabForward<CR>")

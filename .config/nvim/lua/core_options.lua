@@ -7,7 +7,7 @@ vim.opt.cursorline = true
 vim.opt.guicursor = ""
 vim.opt.signcolumn = "yes"
 vim.opt.showmode = false
-vim.opt.spell = true
+-- vim.opt.spell = true
 vim.opt.scrolloff = 10
 
 vim.opt.swapfile = false

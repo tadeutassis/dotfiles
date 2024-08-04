@@ -1,0 +1,81 @@
+\documentclass[a4paper, 12pt]{book}
+\usepackage[margin=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amsfonts, amssymb, mathtools, amsthm} % math stuff
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz} % make graphics
+\usepackage[colorlinks=true,allcolors=blue]{hyperref} % blue links
+
+\pagestyle{plain}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\onehalfspacing
+\frenchspacing
+
+\newcommand{\tx}[1]{\text{#1}}
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\mr}[1]{\mathrm{#1}}
+\newcommand{\mb}[1]{\mathbf{#1}}
+
+\newcommand{\td}[1]{\widetilde{#1}}
+\newcommand{\dagg}[1]{#1^\dagger}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\ddt}[1]{\frac{d #1}{dt}}
+\newcommand{\Ddt}{\frac{d}{dt}}
+\newcommand{\deriv}[2]{\frac{d #1}{d #2}}
+
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+\newcommand{\ket}[1]{\lvert #1 \rangle}
+\newcommand{\bra}[1]{\langle #1 \rvert}
+\newcommand{\braket}[1]{\langle #1 \rangle}
+\newcommand{\proj}[1]{\ket{#1}\!\bra{#1}}
+\newcommand{\ketbra}[2]{\ket{#1}\!\bra{#2}}
+
+\newcommand{\Abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\Norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\Ket}[1]{\left\lvert #1 \right\rangle}
+\newcommand{\Bra}[1]{\left\langle #1 \right\rvert}
+\newcommand{\Braket}[1]{\left\langle #1 \right\rangle}
+\newcommand{\Proj}[1]{\Ket{#1}\!\Bra{#1}}
+\newcommand{\Ketbra}[2]{\Ket{#1}\!\Bra{#2}}
+
+\newcommand{\adag}{a^\dagger}
+\newcommand{\sigx}{\sigma_x}
+\newcommand{\sigy}{\sigma_y}
+\newcommand{\sigz}{\sigma_z}
+\newcommand{\sigp}{\sigma_+}
+\newcommand{\sigm}{\sigma_-}
+
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Ddag}{\mathcal{D}^\dagger}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\Hcal}{\mathcal{H}}
+\newcommand{\nbar}{\bar{n}}
+\newcommand{\wt}{\td{\omega}}
+\newcommand{\veps}{\varepsilon}
+
+\newcommand{\rmv}[1]{\textcolor{Crimson}{#1}}
+\newcommand{\add}[1]{\textcolor{RoyalBlue}{#1}}
+\newcommand{\cmt}[1]{\textcolor{Green}{#1}}
+
+\begin{document}
+
+\begin{flushright}
+  Tadeu Tassis
+  ---
+  {{_lua:os.date("%Y-%m-%d")_}}
+\end{flushright}
+
+\begin{center}
+\large \bfseries
+Title
+\end{center}
+
+\vspace{1em}
+
+{{_cursor_}}
+
+\end{document}
