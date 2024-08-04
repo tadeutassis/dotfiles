@@ -52,12 +52,6 @@ alias ls='eza'
 alias fzvi='nvim $(fzf -m --preview="bat --color=always {}")'
 alias fzat='zathura $(fzf -m --preview="bat --color=always {}")'
 
-# using zoxide to navigate directories
-eval "$(zoxide init --cmd cd zsh)"
-
-# set default text editor
-export EDITOR=nvim
-
 # command history management
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -90,6 +84,12 @@ PROMPT=$(echo $PROMPT | sed "s/(base) //")
 
 # put homebrew on the PATH
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# using zoxide to navigate directories
+eval "$(zoxide init --cmd cd zsh)"
+
+# set default text editor
+export EDITOR=nvim
 
 # nvm lazy loading
 # note: it was fucking up with nvim lsp because node was not being loaded
