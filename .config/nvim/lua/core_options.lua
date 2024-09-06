@@ -1,10 +1,13 @@
 vim.opt.termguicolors = true
--- vim.opt.clipboard:append("unnamedplus") -- note: for some reason, had to manually install xclip / xsel
+-- vim.opt.clipboard:append("unnamedplus")
+-- note: for some reason, had to manually install xclip / xsel
 
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
-vim.opt.guicursor = ""
+vim.opt.textwidth = 80
+vim.opt.colorcolumn = "+1"
+-- vim.opt.guicursor = ""
 vim.opt.signcolumn = "yes"
 vim.opt.showmode = false
 -- vim.opt.spell = true

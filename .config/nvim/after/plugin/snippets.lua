@@ -25,7 +25,7 @@ ls.add_snippets("tex", {
     )
   ),
   s(
-    "\\equation",
+    "\\begineq",
     fmt(
       [[
     \begin{{equation}}
@@ -47,21 +47,21 @@ ls.add_snippets("tex", {
     )
   ),
   ----------------------------------------------------------
-  s("\\eqref", { t("Eq.~\\eqref{"), i(0), t("}") }),
-  s("\\fref", { t("Fig.~\\ref{"), i(0), t("}") }),
-  s("\\sref", { t("Sec.~\\ref{"), i(0), t("}") }),
-  s("\\rref", { t("Ref.~\\cite{"), i(0), t("}") }),
+  -- s("\\eqref", { t("Eq.~\\eqref{"), i(0), t("}") }),
+  -- s("\\fref", { t("Fig.~\\ref{"), i(0), t("}") }),
+  -- s("\\sref", { t("Sec.~\\ref{"), i(0), t("}") }),
+  -- s("\\rref", { t("Ref.~\\cite{"), i(0), t("}") }),
   ----------------------------------------------------------
-  s("\\bigl(", { t("\\bigl( "), i(0), t(" \\bigr)") }),
-  s("\\Bigl(", { t("\\Bigl( "), i(0), t(" \\Bigr)") }),
-  s("\\biggl(", { t("\\biggl( "), i(0), t(" \\biggr)") }),
-  s("\\Biggl(", { t("\\Biggl( "), i(0), t(" \\Biggr)") }),
-  s("\\bigl[", { t("\\bigl[ "), i(0), t(" \\bigr]") }),
-  s("\\Bigl[", { t("\\Bigl[ "), i(0), t(" \\Bigr]") }),
-  s("\\biggl[", { t("\\biggl[ "), i(0), t(" \\biggr]") }),
-  s("\\Biggl[", { t("\\Biggl[ "), i(0), t(" \\Biggr]") }),
-  s("\\bigl\\{", { t("\\bigl\\{ "), i(0), t(" \\bigr\\}") }),
-  s("\\Bigl\\{", { t("\\Bigl\\{ "), i(0), t(" \\Bigr\\}") }),
-  s("\\biggl\\{", { t("\\biggl\\{ "), i(0), t(" \\biggr\\}") }),
-  s("\\Biggl\\{", { t("\\Biggl\\{ "), i(0), t(" \\Biggr\\}") }),
+  -- s("\\bigl(", { t("\\bigl( "), i(0), t(" \\bigr)") }),
+  -- s("\\Bigl(", { t("\\Bigl( "), i(0), t(" \\Bigr)") }),
+  -- s("\\biggl(", { t("\\biggl( "), i(0), t(" \\biggr)") }),
+  -- s("\\Biggl(", { t("\\Biggl( "), i(0), t(" \\Biggr)") }),
+  -- s("\\bigl[", { t("\\bigl[ "), i(0), t(" \\bigr]") }),
+  -- s("\\Bigl[", { t("\\Bigl[ "), i(0), t(" \\Bigr]") }),
+  -- s("\\biggl[", { t("\\biggl[ "), i(0), t(" \\biggr]") }),
+  -- s("\\Biggl[", { t("\\Biggl[ "), i(0), t(" \\Biggr]") }),
+  -- s("\\bigl\\{", { t("\\bigl\\{ "), i(0), t(" \\bigr\\}") }),
+  -- s("\\Bigl\\{", { t("\\Bigl\\{ "), i(0), t(" \\Bigr\\}") }),
+  -- s("\\biggl\\{", { t("\\biggl\\{ "), i(0), t(" \\biggr\\}") }),
+  -- s("\\Biggl\\{", { t("\\Biggl\\{ "), i(0), t(" \\Biggr\\}") }),
 })
