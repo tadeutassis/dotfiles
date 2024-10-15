@@ -3,6 +3,7 @@ set window-width 3000
 set guioptions 'hv'
 set statusbar-basename false
 set font 'CommitMono Nerd Font  normal 13'
+set selection-clipboard clipboard
 # include catppuccin-frappe
 include everforest-dark
 
