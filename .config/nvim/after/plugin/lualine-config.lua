@@ -1,6 +1,6 @@
 require("lualine").setup({
   options = {
-    theme = "everforest",
+    theme = "catppuccin-frappe",
     component_separators = {},
     section_separators = {},
     -- globalstatus = true,
